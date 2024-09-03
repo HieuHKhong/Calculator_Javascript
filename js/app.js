@@ -8,16 +8,15 @@ let clearBtn = document.getElementById("clear")
 // Empty input box
 function clearInput(){
     display.value = "";
+    first = 0;
+    second = 0;
+    operand = '';
 }
 
 clearBtn.addEventListener("click", clearInput);
 
-
-
-
-
-// Getting Number buttons from html and Displaying
-let num1 = document.getElementById("num1")
+// Getletting Number buttons from html and Displaying
+ num1 = document.getElementById("num1")
 
 function btn1() {
     display.value += 1;
@@ -108,5 +107,107 @@ function btn00() {
 
 num00.addEventListener("click", btn00)
 
+
 //!--- END OF NUMBERS ------------------------------------
+
+// Storing values based on operand clicked
+
+let first = 0;
+let operand = '';
+let second = 0;
+let result = 0;
+
+let addition = document.getElementById("add");
+
+addition.addEventListener("click", function adding(){
+    first = display.value;
+    display.value = "";
+    operand = '+';
+    
+})
+
+subtraction = document.getElementById("sub");
+
+subtraction.addEventListener("click", function subbtn(){
+    first = display.value;
+    display.value = "";
+    operand = '-'
+})
+
+multipication = document.getElementById("multi");
+
+multipication.addEventListener("click", function multip(){
+    first = display.value;
+    display.value = "";
+    operand = '*'
+})
+
+division = document.getElementById("divide");
+
+division.addEventListener("click", function dividebtn(){
+    first = display.value;
+    display.value = "";
+    operand = '/'
+})
+
+
+percent = document.getElementById("percentage")
+
+percent.addEventListener("click", function perc(){
+    display.value *= +.01;
+
+})
+
+changesigns = document.getElementById("signs");
+
+changesigns.addEventListener("click", function change(){
+    display.value *= -1;
+})
+
+
+let decimal = document.getElementById("decimal");
+
+decimal.addEventListener("click", function decimalbtn(){
+    display.value += '.';
+})
+
+
+
+
+
+
+// Stores the second value and displays result after "=" is clicked
+let equalto = document.getElementById("equal");
+
+equalto.addEventListener("click", function equalbtn(){
+    if(true && operand === '+'){
+        second = display.value;
+        display.value = "";
+        result = +first + +second;
+        display.value += result;
+        first = result;
+    }else if(true && operand === '-'){
+        second = display.value;
+        display.value = "";
+        result = +first - +second;
+        display.value += result;
+        first = result;
+    }else if(true && operand === '*'){
+        second = display.value;
+        display.value = "";
+        result = (first * second)
+        display.value += result;
+        first = result;
+    }else if(true && operand === '/'){
+        second = display.value;
+        display.value = "";
+        result = (first / second)
+        display.value += result;
+        first = result;
+    }
+})
+
+
+
+
 

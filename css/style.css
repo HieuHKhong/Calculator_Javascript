@@ -51,63 +51,25 @@
 .calculator {
     text-align: center;
     margin-bottom: 3%;
-    padding-bottom: 2%;
+    padding-bottom: 3%;
 
 }
 
 .calculator button{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-left: 3%;
-    margin-right: 3%;
+    width: 70px;
+    height: 50px;
+    margin: 2%;
+    font-size: 140%;
+    box-shadow: 0px 6px 2px 0px rgb(0, 0, 0);
+    border-bottom: #333  solid;
+}
 
+button:active{
+    transform: scale(.90)
 }
 
 .calcButton{
-    background-color: rgb(42, 41, 41);
+    background-color: #333;
+    padding-bottom: 1%;
 }
-
-@media (max-width: 1200px){
-    .calculator button{
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-    }
-}
-
-
-@media (max-width: 991px){
-    .calculator button{
-        width: 30px;
-        height: 30px;
-        font-size: 15px;
-
-    }
-}
-
-
-@media (max-width: 768px){
-    .calculator button{
-        width: 20px;
-        height: 20px;
-        font-size: 7px;
-
-    }
-}
-
-@media (max-width: 440px){
-    .calculator button{
-        margin-top: 0%;
-        margin-bottom: 0%;
-        margin-left: 1%;
-        margin-right: 1%;
-
-    }
-}
-
-
-
 
